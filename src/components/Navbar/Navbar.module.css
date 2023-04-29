@@ -1,5 +1,5 @@
 .navbar {
-  --headerNavFontSize: calc((16 / 16) * 1rem);
+  --headerNavFontSize: calc((16 / 16) * 1.5rem);
 
   display: flex;
   flex-direction: column;
@@ -15,7 +15,7 @@
   isolation: isolate;
 
   @media (--mediaMobile) {
-    --headerNavFontSize: calc((22 / 16) * 1rem);
+    --headerNavFontSize: calc((22 / 16) * 1.5rem);
   }
 
   @media (--mediaMobile), (--mediaMobileLS) {
@@ -26,7 +26,6 @@
 .logo {
   display: flex;
   position: relative;
-  padding: var(--spaceS) var(--spaceS) var(--spaceL);
   z-index: var(--zIndex2);
 
   @media (--mediaMobile) {

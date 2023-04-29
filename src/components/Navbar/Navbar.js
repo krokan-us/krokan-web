@@ -1,5 +1,5 @@
 import { Icon } from 'components/Icon';
-import { Monogram } from 'components/Monogram';
+import Image from 'next/image';
 import { useTheme } from 'components/ThemeProvider';
 import { tokens } from 'components/ThemeProvider/theme';
 import { Transition } from 'components/Transition';
@@ -145,10 +145,15 @@ export const Navbar = () => {
         <a
           data-navbar-item
           className={styles.logo}
-          aria-label="Hamish Williams, Designer"
+          aria-label="krokan"
           onClick={handleMobileNavClick}
         >
-          <Monogram highlight />
+          <Image
+              src="/logo.png" // Path to your image file
+              alt="krokan" // Provide a descriptive text for accessibility
+              width={250} // Set the width of the image
+              height={250} // Set the height of the image
+          />
         </a>
       </RouterLink>
       <NavToggle onClick={() => dispatch({ type: 'toggleMenu' })} menuOpen={menuOpen} />

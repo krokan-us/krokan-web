@@ -24,13 +24,13 @@ export const socialLinks = [
     icon: 'twitter',
   },
   {
-    label: 'Figma',
-    url: 'https://www.figma.com/@Hamish',
-    icon: 'figma',
-  },
-  {
     label: 'Github',
     url: 'https://github.com/HamishMW',
     icon: 'github',
+  },
+  {
+    label: 'LinkedIn',
+    url: 'https://linkedin.com/',
+    icon: 'linkedin',
   },
 ];

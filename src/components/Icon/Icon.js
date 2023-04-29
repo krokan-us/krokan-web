@@ -10,8 +10,10 @@ import Error from './svg/error.svg';
 import Figma from './svg/figma.svg';
 import Github from './svg/github.svg';
 import Link from './svg/link.svg';
+import LinkedIn from './svg/linkedin.svg';
 import Menu from './svg/menu.svg';
 import Pause from './svg/pause.svg';
+import Heart from './svg/heart.svg';
 import Play from './svg/play.svg';
 import Send from './svg/send.svg';
 import Twitter from './svg/twitter.svg';
@@ -27,10 +29,12 @@ export const icons = {
   figma: Figma,
   github: Github,
   link: Link,
+  linkedin: LinkedIn,
   menu: Menu,
   pause: Pause,
   play: Play,
   send: Send,
+  heart: Heart,
   twitter: Twitter,
 };
 
