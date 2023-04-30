@@ -1,15 +1,11 @@
 export const navLinks = [
   {
     label: 'Projects',
-    pathname: '/#project-1',
+    pathname: '/#dailyHadiths',
   },
   {
     label: 'Details',
     pathname: '/#details',
-  },
-  {
-    label: 'Articles',
-    pathname: '/articles',
   },
   {
     label: 'Contact',
@@ -20,12 +16,12 @@ export const navLinks = [
 export const socialLinks = [
   {
     label: 'Twitter',
-    url: 'https://twitter.com/hamishMW',
+    url: 'https://twitter.com/',
     icon: 'twitter',
   },
   {
     label: 'Github',
-    url: 'https://github.com/HamishMW',
+    url: 'https://github.com/krokan-us',
     icon: 'github',
   },
   {

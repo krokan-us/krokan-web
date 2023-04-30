@@ -1,6 +1,8 @@
 import profileKatakana from 'assets/katakana-profile.svg?url';
 import profileImgLarge from 'assets/profile-large.jpg';
 import profileImgPlaceholder from 'assets/profile-placeholder.jpg';
+import blurImage from 'assets/blur.jpg';
+import krokanFull from 'assets/social-image.png';
 import profileImg from 'assets/profile.jpg';
 import { Button } from 'components/Button';
 import { DecoderText } from 'components/DecoderText';
@@ -18,19 +20,14 @@ import styles from './Profile.module.css';
 const ProfileText = ({ visible, titleId }) => (
   <Fragment>
     <Heading className={styles.title} data-visible={visible} level={3} id={titleId}>
-      <DecoderText text="Hi there" start={visible} delay={500} />
+      <DecoderText text="We're krokan!" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I’m Hamish, currently I live in Sydney working as a senior product designer at{' '}
-      <Link href="https://www.qwilr.com">Qwilr</Link>. My projects include UX design, UI
-      animations, and icon illustration. Being comfortable with code allows me to rapidly
-      prototype and validate experiences. If you’re interested in the tools and software I
-      use check out my <Link href="/uses">uses page</Link>.
-    </Text>
-    <Text className={styles.description} data-visible={visible} size="l" as="p">
-      In my spare time I like to practice Brazilian Jiu Jitsu, play video games, and{' '}
-      <Link href="/projects/volkihar-knight">make mods</Link>. I’m always down for hearing
-      about new projects, so feel free to drop me a line.
+        Krokan is a team of passionate and experienced developers,
+        dedicated to transforming your ideas into engaging, user-focused mobile applications.
+        As a collaborative and agile startup, we pride ourselves on our ability to adapt to
+        the ever-evolving landscape of the mobile app industry, ensuring our clients receive
+        cutting-edge solutions tailored to their unique needs.
     </Text>
   </Fragment>
 );
@@ -62,7 +59,7 @@ export const Profile = ({ id, visible, sectionRef }) => {
                 href="/contact"
                 icon="send"
               >
-                Send me a message
+                  {"Let's work together!"}
               </Button>
             </div>
             <div className={styles.column}>
@@ -73,18 +70,15 @@ export const Profile = ({ id, visible, sectionRef }) => {
                   collapsed={!visible}
                   collapseDelay={1000}
                 />
-                <div className={styles.tagText} data-visible={visible}>
-                  About Me
-                </div>
               </div>
               <div className={styles.image}>
                 <Image
                   reveal
                   delay={100}
-                  placeholder={profileImgPlaceholder}
-                  srcSet={[profileImg, profileImgLarge]}
+                  placeholder={blurImage}
+                  srcSet={[krokanFull, krokanFull]}
                   sizes={`(max-width: ${media.mobile}px) 100vw, 480px`}
-                  alt="Me standing in front of the Torii on Miyajima, an island off the coast of Hiroshima in Japan"
+                  alt="Dream. Build. Connect."
                 />
                 <svg
                   aria-hidden="true"

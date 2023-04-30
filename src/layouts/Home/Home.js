@@ -1,15 +1,12 @@
-import gamestackTexture2Large from 'assets/gamestack-list-large.jpg';
-import gamestackTexture2Placeholder from 'assets/gamestack-list-placeholder.jpg';
-import gamestackTexture2 from 'assets/gamestack-list.jpg';
-import gamestackTextureLarge from 'assets/gamestack-login-large.jpg';
-import gamestackTexturePlaceholder from 'assets/gamestack-login-placeholder.jpg';
-import gamestackTexture from 'assets/gamestack-login.jpg';
-import sliceTextureLarge from 'assets/slice-app-large.jpg';
-import sliceTexturePlaceholder from 'assets/slice-app-placeholder.jpg';
-import sliceTexture from 'assets/slice-app.jpg';
-import sprTextureLarge from 'assets/spr-lesson-builder-dark-large.jpg';
-import sprTexturePlaceholder from 'assets/spr-lesson-builder-dark-placeholder.jpg';
-import sprTexture from 'assets/spr-lesson-builder-dark.jpg';
+import blurryImage from 'assets/blur.jpg';
+import dailyHadiths1 from 'assets/dailyHadiths.jpg';
+import dailyHadithsLarge1 from 'assets/dailyHadithsLarge.jpg';
+import dailyHadiths2 from 'assets/dailyHadiths2.jpg';
+import dailyHadithsLarge2 from 'assets/dailyHadithsLarge2.jpg';
+import bilkentMenu1 from 'assets/bilkentMenu.jpg';
+import bilkentMenuLarge1 from 'assets/bilkentMenuLarge.jpg';
+import bilkentMenu2 from 'assets/bilkentMenu2.jpg';
+import bilkentMenuLarge2 from 'assets/bilkentMenuLarge2.jpg';
 import { Footer } from 'components/Footer';
 import { Meta } from 'components/Meta';
 import { Intro } from 'layouts/Home/Intro';
@@ -26,11 +23,10 @@ export const Home = () => {
   const intro = useRef();
   const dailyHadiths = useRef();
   const bilkentMenu = useRef();
-  const newApp = useRef();
   const details = useRef();
 
   useEffect(() => {
-    const sections = [intro, dailyHadiths, bilkentMenu, newApp, details];
+    const sections = [intro, dailyHadiths, bilkentMenu, details];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -69,8 +65,7 @@ export const Home = () => {
     <div className={styles.home}>
       <Meta
         title="Dream. Build. Connect."
-        description="Discover Krokan: expert mobile app development for
-         iOS and Android. We create engaging, user-focused applications
+        description="We create engaging, user-focused applications
           that elevate your digital presence. Transform your ideas with us today."
       />
       <Intro
@@ -85,21 +80,21 @@ export const Home = () => {
             sectionRef={dailyHadiths}
             visible={visibleSections.includes(dailyHadiths.current)}
             index={1}
-            title="Video game progress tracking"
-            description="Design and development for a video game tracking app built in React Native"
-            buttonText="View website"
-            buttonLink="https://gamestack.hamishw.com"
+            title="Daily Hadiths"
+            description="Daily inspiration from Hadiths"
+            buttonText="App Store"
+            buttonLink="https://apps.apple.com/tr/app/daily-hadiths/id6447806826?platform=iphone"
             model={{
                 type: 'phone',
-                alt: 'App login screen',
+                alt: 'Daily Hadiths main',
                 textures: [
                     {
-                        srcSet: [gamestackTexture, gamestackTextureLarge],
-                        placeholder: gamestackTexturePlaceholder,
+                        srcSet: [dailyHadiths1, dailyHadithsLarge1],
+                        placeholder: blurryImage,
                     },
                     {
-                        srcSet: [gamestackTexture2, gamestackTexture2Large],
-                        placeholder: gamestackTexture2Placeholder,
+                        srcSet: [dailyHadiths2, dailyHadithsLarge2],
+                        placeholder: blurryImage,
                     },
                 ],
             }}
@@ -110,50 +105,25 @@ export const Home = () => {
         sectionRef={bilkentMenu}
         visible={visibleSections.includes(bilkentMenu.current)}
         index={2}
-        title="Video game progress tracking"
-        description="Design and development for a video game tracking app built in React Native"
-        buttonText="View website"
-        buttonLink="https://gamestack.hamishw.com"
+        title="Bilkent Cafeteria Menu"
+        description="Meal List in Your Pocket"
+        buttonText="App Store"
+        buttonLink="https://apps.apple.com/tr/app/bilkent-cafeteria-menu/id6448339268"
         model={{
           type: 'phone',
-          alt: 'App login screen',
+          alt: 'Bilkent Menu',
           textures: [
             {
-              srcSet: [gamestackTexture, gamestackTextureLarge],
-              placeholder: gamestackTexturePlaceholder,
+              srcSet: [bilkentMenu1, bilkentMenuLarge1],
+              placeholder: blurryImage,
             },
             {
-              srcSet: [gamestackTexture2, gamestackTexture2Large],
-              placeholder: gamestackTexture2Placeholder,
+              srcSet: [bilkentMenu2, bilkentMenuLarge2],
+              placeholder: blurryImage,
             },
           ],
         }}
       />
-        <ProjectSummary
-            id="newApp"
-            alternate
-            sectionRef={newApp}
-            visible={visibleSections.includes(newApp.current)}
-            index={3}
-            title="Video game progress tracking"
-            description="Design and development for a video game tracking app built in React Native"
-            buttonText="View website"
-            buttonLink="https://gamestack.hamishw.com"
-            model={{
-                type: 'phone',
-                alt: 'App login screen',
-                textures: [
-                    {
-                        srcSet: [gamestackTexture, gamestackTextureLarge],
-                        placeholder: gamestackTexturePlaceholder,
-                    },
-                    {
-                        srcSet: [gamestackTexture2, gamestackTexture2Large],
-                        placeholder: gamestackTexture2Placeholder,
-                    },
-                ],
-            }}
-        />
       <Profile
         sectionRef={details}
         visible={visibleSections.includes(details.current)}
