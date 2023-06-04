@@ -7,6 +7,8 @@ import bilkentMenu1 from 'assets/bilkentMenu.jpg';
 import bilkentMenuLarge1 from 'assets/bilkentMenuLarge.jpg';
 import bilkentMenu2 from 'assets/bilkentMenu2.jpg';
 import bilkentMenuLarge2 from 'assets/bilkentMenuLarge2.jpg';
+import QrReader from 'assets/qr1.jpeg';
+import QrReader2 from 'assets/qr2.jpeg';
 import { Footer } from 'components/Footer';
 import { Meta } from 'components/Meta';
 import { Intro } from 'layouts/Home/Intro';
@@ -74,31 +76,31 @@ export const Home = () => {
         disciplines={disciplines}
         scrollIndicatorHidden={scrollIndicatorHidden}
       />
-        <ProjectSummary
-            id="dailyHadiths"
-            alternate
-            sectionRef={dailyHadiths}
-            visible={visibleSections.includes(dailyHadiths.current)}
-            index={1}
-            title="Daily Hadiths"
-            description="Daily inspiration from Hadiths"
-            buttonText="App Store"
-            buttonLink="https://apps.apple.com/tr/app/daily-hadiths/id6447806826?platform=iphone"
-            model={{
-                type: 'phone',
-                alt: 'Daily Hadiths main',
-                textures: [
-                    {
-                        srcSet: [dailyHadiths1, dailyHadithsLarge1],
-                        placeholder: blurryImage,
-                    },
-                    {
-                        srcSet: [dailyHadiths2, dailyHadithsLarge2],
-                        placeholder: blurryImage,
-                    },
-                ],
-            }}
-        />
+      <ProjectSummary
+        id="dailyHadiths"
+        alternate
+        sectionRef={dailyHadiths}
+        visible={visibleSections.includes(dailyHadiths.current)}
+        index={1}
+        title="Daily Hadiths"
+        description="Daily inspiration from Hadiths"
+        buttonText="App Store"
+        buttonLink="https://apps.apple.com/tr/app/daily-hadiths/id6447806826?platform=iphone"
+        model={{
+          type: 'phone',
+          alt: 'Daily Hadiths main',
+          textures: [
+            {
+              srcSet: [dailyHadiths1, dailyHadithsLarge1],
+              placeholder: blurryImage,
+            },
+            {
+              srcSet: [dailyHadiths2, dailyHadithsLarge2],
+              placeholder: blurryImage,
+            },
+          ],
+        }}
+      />
       <ProjectSummary
         id="bilkentMenu"
         alternate
@@ -119,6 +121,31 @@ export const Home = () => {
             },
             {
               srcSet: [bilkentMenu2, bilkentMenuLarge2],
+              placeholder: blurryImage,
+            },
+          ],
+        }}
+      />
+      <ProjectSummary
+        id="qrReader"
+        alternate
+        sectionRef={bilkentMenu}
+        visible={visibleSections.includes(bilkentMenu.current)}
+        index={3}
+        title="QR Reader / Generator"
+        description="Scan and Create QR Codes"
+        buttonText="App Store"
+        buttonLink="https://apps.apple.com/tr/app/qr-reader-generator/id6449682749"
+        model={{
+          type: 'phone',
+          alt: 'QR Reader',
+          textures: [
+            {
+              srcSet: [QrReader, QrReader],
+              placeholder: blurryImage,
+            },
+            {
+              srcSet: [QrReader2, QrReader2],
               placeholder: blurryImage,
             },
           ],
