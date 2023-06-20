@@ -7,6 +7,8 @@ import bilkentMenu1 from 'assets/bilkentMenu.jpg';
 import bilkentMenuLarge1 from 'assets/bilkentMenuLarge.jpg';
 import bilkentMenu2 from 'assets/bilkentMenu2.jpg';
 import bilkentMenuLarge2 from 'assets/bilkentMenuLarge2.jpg';
+import Pomodoro1 from 'assets/pomodoro1.jpg';
+import Pomodoro2 from 'assets/pomodoro2.jpg';
 import QrReader from 'assets/qr1.jpeg';
 import QrReader2 from 'assets/qr2.jpeg';
 import { Footer } from 'components/Footer';
@@ -25,10 +27,12 @@ export const Home = () => {
   const intro = useRef();
   const dailyHadiths = useRef();
   const bilkentMenu = useRef();
+  const qrReader = useRef();
+  const PomodoroRef = useRef();
   const details = useRef();
 
   useEffect(() => {
-    const sections = [intro, dailyHadiths, bilkentMenu, details];
+    const sections = [intro, dailyHadiths, bilkentMenu, qrReader, PomodoroRef, details];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -129,8 +133,8 @@ export const Home = () => {
       <ProjectSummary
         id="qrReader"
         alternate
-        sectionRef={bilkentMenu}
-        visible={visibleSections.includes(bilkentMenu.current)}
+        sectionRef={qrReader}
+        visible={visibleSections.includes(qrReader.current)}
         index={3}
         title="QR Reader / Generator"
         description="Scan and Create QR Codes"
@@ -146,6 +150,31 @@ export const Home = () => {
             },
             {
               srcSet: [QrReader2, QrReader2],
+              placeholder: blurryImage,
+            },
+          ],
+        }}
+      />
+      <ProjectSummary
+        id="pomodoro"
+        alternate
+        sectionRef={PomodoroRef}
+        visible={visibleSections.includes(PomodoroRef.current)}
+        index={3}
+        title="Pomodoro Plus"
+        description="Rocket your productivity!"
+        buttonText="App Store"
+        buttonLink="https://apps.apple.com/tr/app/pomodoro-plus/id6449823160"
+        model={{
+          type: 'phone',
+          alt: 'Pomodoro Plus',
+          textures: [
+            {
+              srcSet: [Pomodoro1, Pomodoro1],
+              placeholder: blurryImage,
+            },
+            {
+              srcSet: [Pomodoro2, Pomodoro2],
               placeholder: blurryImage,
             },
           ],
