@@ -160,7 +160,7 @@ export const Home = () => {
         alternate
         sectionRef={PomodoroRef}
         visible={visibleSections.includes(PomodoroRef.current)}
-        index={3}
+        index={4}
         title="Pomodoro Plus"
         description="Rocket your productivity!"
         buttonText="App Store"
