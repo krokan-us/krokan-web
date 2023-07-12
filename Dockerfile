@@ -1,6 +1,14 @@
 # Use official Node.js 18 image
 FROM node:18
 
+# Install Chromium
+RUN apt-get update && apt-get install -y chromium
+
+# Set Puppeteer's environment variables so it knows where to find Chromium
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
+ENV PUPPETEER_EXECUTABLE_PATH /usr/bin/chromium
+
+
 # Set working directory in the container
 WORKDIR /usr/src/app
 
